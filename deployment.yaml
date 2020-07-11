@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-python-api
+spec:
+  selector:
+    matchLabels:
+      app: simple-python-api
+  template:
+    metadata:
+      labels:
+        app: simple-python-api
+    spec:
+      containers:
+      - name: simple-python-api
+        image: diegodejesus/simple-python-api:sha-e5ae4b0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-python-api
+spec:
+  selector:
+    app: simple-python-api
+  ports:
+  - port: 8000
+    targetPort: 8000
+
