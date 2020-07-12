@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: simple-python-api
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: simple-python-api
@@ -32,4 +33,5 @@ spec:
   ports:
   - port: 8000
     targetPort: 8000
+  type: NodePort
 
