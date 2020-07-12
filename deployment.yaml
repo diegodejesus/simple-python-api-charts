@@ -15,10 +15,6 @@ spec:
       containers:
       - name: simple-python-api
         image: diegodejesus/simple-python-api:f2e68de500bb1157f4e1ffa384808a16269d8d00
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 8000
 
