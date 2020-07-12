@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: simple-python-api
-        image: diegodejesus/simple-python-api:f2e68de500bb1157f4e1ffa384808a16269d8d00
+        image: diegodejesus/simple-python-api:28785d1aff1b7d2ea08f042e9508daa1fae41bb1
         ports:
         - containerPort: 8000
 
