@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: simple-python-api
-        image: diegodejesus/simple-python-api:sha-e5ae4b0
+        image: diegodejesus/simple-python-api:${DOCKER_TAG}
         resources:
           limits:
             memory: "128Mi"
